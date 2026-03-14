@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "9002:9002"
+    volumes:
+      # Mount the entire project directory to /app in the container
+      - .:/app
+      # Use an anonymous volume for node_modules to prevent the host's node_modules
+      # from overwriting the one installed in the container.
+      - /app/node_modules
+      # Keep the .next folder in the container to avoid issues between host and container OS.
+      - /app/.next
+    environment:
+      NODE_ENV: development
