@@ -1,3 +1,3 @@
-# LabelFlow
+# BJ's LabelFlow (Automated Barcode Printing for TM Badges)
 
-A basic app that creates bulk barcodes from CSV
+A lightweight Barcode Generator app that can be accessed programmatically from within BJ's EquipTrack or via the applications GUI.
